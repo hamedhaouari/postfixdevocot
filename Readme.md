@@ -55,6 +55,9 @@ mkdir -p /var/mail/vhosts/royal-immo.tn
 mkdir -p /var/mail/vhosts/m.bnb.tn
 mkdir -p /var/mail/vhosts/m.tangorythm.com
 ```
+```
+connect = host=167.114.3.80:31378 dbname=mymail user=root password=Vps2019
+```
 
 
 
