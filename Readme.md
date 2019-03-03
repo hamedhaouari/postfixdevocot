@@ -22,3 +22,31 @@ postconf -e 'virtual_mailbox_domains = mysql:/etc/postfix/mysql-virtual-mailbox-
 postconf -e 'virtual_mailbox_maps = mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf'
 postconf -e 'virtual_alias_maps = mysql:/etc/postfix/mysql-virtual-alias-maps.cf'
 ```
+```
+nano /etc/postfix/mysql-virtual-mailbox-domains.cf
+		
+user = root
+password = Vps2019
+hosts = 167.114.3.80:31378
+dbname = mymail
+query = SELECT 1 FROM virtual_domains WHERE name='%s'
+```
+
+```
+nano /etc/postfix/mysql-virtual-mailbox-maps.cf 
+		
+user = root
+password = Vps2019
+hosts = 167.114.3.80:31378
+dbname = mymail
+query = SELECT 1 FROM virtual_users WHERE email='%s'
+```
+```
+nano /etc/postfix/mysql-virtual-alias-maps.cf
+
+user = root
+password = Vps2019
+hosts = 167.114.3.80:31378
+dbname = mymail
+query = SELECT destination FROM virtual_aliases WHERE source='%s'
+````
