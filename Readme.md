@@ -50,9 +50,11 @@ hosts = 167.114.3.80:31378
 dbname = mymail
 query = SELECT destination FROM virtual_aliases WHERE source='%s'
 ````
+```
 mkdir -p /var/mail/vhosts/royal-immo.tn
 mkdir -p /var/mail/vhosts/m.bnb.tn
 mkdir -p /var/mail/vhosts/m.tangorythm.com
+```
 
 
 
