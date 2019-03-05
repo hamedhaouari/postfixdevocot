@@ -9,6 +9,7 @@ apt-get install postfix postfix-mysql dovecot-core dovecot-imapd dovecot-lmtpd d
 - https://www.linuxbabe.com/mail-server/setting-up-dkim-and-spf
 - https://www.linuxbabe.com/mail-server/create-dmarc-record
 - https://rageagainstshell.com/2016/06/postfix-opendmarc/
+- https://www.infopackets.com/news/10218/how-fix-send-encrypted-email-gmail-postfix-tls-ssl-certificates     "smtp crypt"
 
 ```
 postconf -e 'smtpd_tls_cert_file=/etc/letsencrypt/live/email.bnbpro.tn/fullchain.pem'
